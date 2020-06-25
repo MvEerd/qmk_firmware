@@ -66,3 +66,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+//#define RGB_DI_PIN D1
+//#define RGBLED_NUM 5
+//#define RGBLED_SPLIT
