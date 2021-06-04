@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 _______   ,_______   ,                   KC_VOLD   ,KC_VOLU   ,
                                                 _______   ,_______   ,                   KC_HOME   ,KC_END    ,
                                                 _______   ,_______   ,                   _______   ,_______
-  ),6
+  ),
 
   [_ADJUST]    = LAYOUT_5x6(
     RGB_TOG   ,RGB_M_P   ,RGB_M_B   ,RGB_M_R   ,RGB_M_SW  ,RGB_M_SN  ,                   RGB_M_K   ,RGB_M_X   ,RGB_M_G    ,RGB_M_T   ,_______   ,_______   ,
