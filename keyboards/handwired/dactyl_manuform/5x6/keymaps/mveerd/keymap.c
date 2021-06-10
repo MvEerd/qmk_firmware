@@ -24,6 +24,7 @@
 #define RGB_REV     RGB_MODE_REVERSE
 #define ALTRIGHT    LALT_T(KC_RIGHT)
 #define SFT_QUOTE   MT(MOD_RSFT, KC_QUOTE)
+#define SFT_TAB     MT(KC_TAB, KC_QUOTE)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -33,17 +34,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_LSFT   ,KC_A      ,KC_S      ,KC_D      ,KC_F      ,KC_G      ,                KC_H      ,KC_J      ,KC_K      ,KC_L      ,L2_SCLN   ,SFT_QUOTE ,
      L1_GRV    ,KC_Z      ,KC_X      ,KC_C      ,KC_V      ,KC_B      ,                KC_N      ,KC_M      ,KC_COMM   ,KC_DOT    ,KC_SLSH   ,L3_BSLASH ,
                            KC_LEFT   ,ALTRIGHT  ,                                                            KC_UP     ,KC_DOWN   ,
-                                                 KC_SPACE  ,CTL_BSPACE,                KC_TAB    ,CTL_ENTER ,
+                                                 CTL_SPACE ,L1_BSPACE ,                SFT_TAB   ,CTL_ENTER ,
                                                  KC_PGUP   ,KC_F24    ,                KC_END    ,KC_DEL    ,
                                                  KC_PGDN   ,KC_LGUI   ,                KC_LGUI   ,KC_LALT
   ),
 
    [_RAISE] = LAYOUT_5x6(
-     KC_TILD   ,KC_EXLM   , KC_AT    ,KC_HASH   ,KC_DLR    ,KC_PERC   ,                 KC_CIRC   ,KC_AMPR   ,KC_ASTR   ,KC_LPRN   ,KC_RPRN   ,KC_DEL    ,
-     _______   ,_______   ,_______   ,_______   ,_______   ,_______   ,                 _______   ,KC_LPRN   ,KC_RPRN   ,KC_LT     ,KC_GT     ,KC_PIPE   ,
-     _______   ,KC_HOME   ,KC_PGDN   ,KC_PGUP   ,KC_END    ,_______   ,                 _______   ,KC_LCBR   ,KC_RCBR   ,LBRACKET  ,RBRACKET  ,KC_PIPE   ,
-     _______   ,_______   ,_______   ,_______   ,_______   ,_______   ,                 _______   ,_______   ,_______   ,_______   ,KC_EQL    ,KC_UNDS   ,
-                           _______   ,_______   ,                                                             _______   ,_______   ,
+     KC_TILD   ,KC_EXLM   , KC_AT    ,KC_HASH   ,KC_DLR    ,KC_PERC  ,                 KC_CIRC   ,KC_AMPR   ,KC_ASTR   ,KC_LPRN   ,KC_RPRN   ,KC_DEL    ,
+     _______   ,_______   , KC_7     ,KC_8      ,KC_9      ,_______  ,                 _______   ,KC_LPRN   ,KC_RPRN   ,KC_LT     ,KC_GT     ,KC_PIPE   ,
+     _______   ,_______   , KC_4     ,KC_5      ,KC_6      ,_______  ,                 _______   ,KC_LCBR   ,KC_RCBR   ,LBRACKET  ,RBRACKET  ,KC_PIPE   ,
+     _______   ,_______   , KC_1     ,KC_2      ,KC_3      ,_______  ,                 _______   ,_______   ,_______   ,_______   ,KC_EQL    ,KC_UNDS   ,
+                           _______   ,KC_0      ,                                                            _______   ,_______   ,
                                                  _______   ,_______   ,                 _______   ,_______   ,
                                                  _______   ,_______   ,                 _______   ,_______   ,
                                                  _______   ,_______   ,                 _______   ,_______
