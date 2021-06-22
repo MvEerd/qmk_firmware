@@ -2,9 +2,11 @@
 #include QMK_KEYBOARD_H
 
 #define _QWERTY 0
-#define _RAISE 1
-#define _LOWER 2
-#define _ADJUST 3
+#define _COLE 1
+#define _RAISE 2
+#define _LOWER 3
+#define _ADJUST 4
+
 
 #define L1 MO(_RAISE)
 #define L2 MO(_LOWER)
@@ -28,7 +30,7 @@
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-   [0] = LAYOUT_5x6(
+   [_QWERTY] = LAYOUT_5x6(
      KC_EQL    ,KC_1      ,KC_2      ,KC_3      ,KC_4      ,KC_5      ,                KC_6      ,KC_7      ,KC_8      ,KC_9      ,KC_0      ,KC_MINS   ,
      KC_ESC    ,KC_Q      ,KC_W      ,KC_E      ,KC_R      ,KC_T      ,                KC_Y      ,KC_U      ,KC_I      ,KC_O      ,KC_P      ,KC_BSLASH ,
      KC_LSFT   ,KC_A      ,KC_S      ,KC_D      ,KC_F      ,KC_G      ,                KC_H      ,KC_J      ,KC_K      ,KC_L      ,L2_SCLN   ,SFT_QUOTE ,
@@ -37,6 +39,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                  CTL_SPACE ,L1_BSPACE ,                SFT_TAB   ,CTL_ENTER ,
                                                  KC_PGUP   ,KC_F24    ,                KC_END    ,KC_DEL    ,
                                                  KC_PGDN   ,KC_LGUI   ,                KC_LGUI   ,KC_LALT
+  ),
+    
+   [_COLE] = LAYOUT_5x6(
+     _______   ,_______   ,_______   ,_______   ,_______   ,_______   ,                _______   ,_______   ,_______   ,_______   ,_______   ,_______   ,
+     _______   ,_______   ,_______   ,KC_F      ,KC_P      ,KC_B      ,                KC_J      ,KC_L      ,KC_U      ,KC_Y      ,KC_SCLN   ,_______   ,
+     _______   ,KC_A      ,KC_R      ,KC_S      ,KC_T      ,KC_G      ,                KC_M      ,KC_N      ,KC_E      ,KC_I      ,KC_O      ,_______   ,
+     _______   ,KC_Z      ,KC_X      ,KC_C      ,KC_D      ,KC_V      ,                KC_K      ,KC_H      ,KC_COMM   ,KC_DOT    ,KC_SLSH   ,_______   ,
+                           _______   ,_______   ,                                                            _______   ,_______   ,
+                                                 _______   ,_______   ,                _______   ,_______ ,
+                                                 _______   ,_______   ,                _______   ,_______ ,
+                                                 _______   ,_______   ,                _______   ,_______
   ),
 
    [_RAISE] = LAYOUT_5x6(
@@ -62,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_ADJUST]    = LAYOUT_5x6(
-    RGB_TOG   ,RGB_M_P   ,RGB_M_B   ,RGB_M_R   ,RGB_M_SW  ,RGB_M_SN  ,                   RGB_M_K   ,RGB_M_X   ,RGB_M_G    ,RGB_M_T   ,_______   ,_______   ,
+    RGB_TOG   ,RGB_M_P   ,RGB_M_B   ,RGB_M_R   ,RGB_M_SW  ,RGB_M_SN  ,                   RGB_M_K   ,RGB_M_X   ,RGB_M_G    ,RGB_M_T   ,_______   ,TG(_COLE) ,
     RGB_TOG   ,RGB_M_B   ,RGB_M_R   ,_______   ,_______   ,_______   ,                   KC_RBRC   ,_______   ,KC_NLCK    ,KC_INS    ,KC_SLCK   ,KC_MUTE   ,
     _______   ,_______   ,_______   ,_______   ,_______   ,_______   ,                   KC_RPRN   ,KC_MPRV   ,KC_MPLY    ,KC_MNXT   ,_______   ,KC_VOLU   ,
     RAINBOW   ,RGB_M_SN  ,_______   ,_______   ,RGB_REV   ,RGB_FOR   ,                   _______   ,_______   ,_______    ,_______   ,_______   ,KC_VOLD   ,
