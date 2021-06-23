@@ -26,7 +26,7 @@
 #define RGB_REV     RGB_MODE_REVERSE
 #define ALTRIGHT    LALT_T(KC_RIGHT)
 #define SFT_QUOTE   MT(MOD_RSFT, KC_QUOTE)
-#define SFT_TAB     MT(KC_TAB, MOD_RSFT)
+#define SFT_TAB     MT(MOD_RSFT, KC_TAB)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
